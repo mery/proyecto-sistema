@@ -1,0 +1,9 @@
+##########################################################################
+proyecto-sistema
+##########################################################################
+
+    *  Sistema Operativo: Ubuntu 9.04
+          o Lenguaje de Programación: Python 2.5
+          o Editor de Texto: Geany 0.18
+Librerias: Glade, pygtk
+
