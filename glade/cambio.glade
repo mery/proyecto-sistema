@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<glade-interface>
+  <!-- interface-requires gtk+ 2.16 -->
+  <!-- interface-naming-policy toplevel-contextual -->
+  <widget class="GtkWindow" id="VentanaPrincipal">
+    <property name="visible">True</property>
+    <property name="title" translatable="yes">Cambio de Wallpaper</property>
+    <property name="default_width">505</property>
+    <property name="default_height">450</property>
+    <signal name="destroy" handler="on_VentanaPrincipal_destroy"/>
+    <child>
+      <widget class="GtkLayout" id="layout1">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkLabel" id="label1">
+            <property name="width_request">328</property>
+            <property name="height_request">52</property>
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">CAMBIO DE WALLPAPER</property>
+            <property name="width_chars">2</property>
+          </widget>
+          <packing>
+            <property name="x">88</property>
+            <property name="y">22</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="cam_ale">
+            <property name="label" translatable="yes">Cambiar aleatoriamentamente</property>
+            <property name="width_request">174</property>
+            <property name="height_request">44</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_cam_ale_clicked"/>
+          </widget>
+          <packing>
+            <property name="x">16</property>
+            <property name="y">139</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="selec_img">
+            <property name="label" translatable="yes">Buscar imagen</property>
+            <property name="width_request">171</property>
+            <property name="height_request">43</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_selec_img_clicked"/>
+          </widget>
+          <packing>
+            <property name="x">19</property>
+            <property name="y">198</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkHBox" id="hbox1">
+            <property name="width_request">277</property>
+            <property name="height_request">223</property>
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkScrolledWindow" id="scrolled">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="hscrollbar_policy">automatic</property>
+                <property name="vscrollbar_policy">automatic</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="x">214</property>
+            <property name="y">97</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="usar">
+            <property name="label" translatable="yes">Usar imagen</property>
+            <property name="width_request">177</property>
+            <property name="height_request">43</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_usar_clicked"/>
+          </widget>
+          <packing>
+            <property name="x">15</property>
+            <property name="y">82</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="salir">
+            <property name="label" translatable="yes">Salir</property>
+            <property name="width_request">146</property>
+            <property name="height_request">48</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_salir_clicked"/>
+          </widget>
+          <packing>
+            <property name="x">320</property>
+            <property name="y">363</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="cam_direc">
+            <property name="label" translatable="yes">Cambio de directorio
+para el aleatorio</property>
+            <property name="width_request">170</property>
+            <property name="height_request">46</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_cam_direc_clicked"/>
+          </widget>
+          <packing>
+            <property name="x">20</property>
+            <property name="y">258</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkButton" id="ini_auto">
+            <property name="label" translatable="yes">Iniciar cambios automaticos</property>
+            <property name="width_request">172</property>
+            <property name="height_request">42</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_ini_auto_clicked"/>
+          </widget>
+          <packing>
+            <property name="x">20</property>
+            <property name="y">321</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkFileChooserDialog" id="selectorimagen">
+    <property name="border_width">5</property>
+    <property name="window_position">center-on-parent</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="type_hint">dialog</property>
+    <property name="has_separator">False</property>
+    <child internal-child="vbox">
+      <widget class="GtkVBox" id="dialog-vbox1">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child>
+          <widget class="GtkImage" id="PreviewFile">
+            <property name="visible">True</property>
+            <property name="stock">gtk-missing-image</property>
+          </widget>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <widget class="GtkHButtonBox" id="dialog-action_area1">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <widget class="GtkButton" id="BCancel">
+                <property name="label" translatable="yes">gtk-close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkButton" id="BOk">
+                <property name="label" translatable="yes">gtk-ok</property>
+                <property name="response_id">1</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
